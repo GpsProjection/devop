@@ -1,0 +1,60 @@
+<html>
+	<h1><font face="Calibri" color="White"><center>UPLOADING FILE</center></font></h1>
+		<head>
+			<title>Uploading File</title>
+			<style>
+				#sub 
+				{
+					-moz-border-radius: 15px;
+					-webkit-border-radius: 15px;
+					border: 0px solid #000000;
+					padding: 5px;
+				}
+				body
+				{
+					background-image: url("Forensics_Background2.jpg");
+					background-size: 100% 100%;
+				}
+				footer
+				{
+            		width: 100%;
+            		bottom: 0;
+            		position: fixed;
+        		}
+        		form
+        		{
+        			margin: 0 auto; 
+					width:170px;
+        		}
+			</style>
+			<script>
+				function populateTypeOfFilter()
+				{
+					var filteroption=$('#FilterOption').val()
+					if (filteroption=="None")
+					{
+						$('#').html('<option value="NULL">SELECT THE ATTRIBUTE</option>');
+					}
+					
+				}
+			</script>
+		</head>
+		<body>
+			<br><br><br><br><br><br>
+			<form enctype="multipart/form-data" action="/cgi-bin/save_file.py" method="post">
+			<p><font face="Calibri" color="White"><br><br><input type="file" name="myfile"></font></p>
+			<p><font face="Calibri" color="White">Filter by</font></p>
+    		<p><select id="FilterOption" onChange="populateTypeOfFilter()">
+    			<option value='None'>None</option>
+    			<option value='Time'>Time</option>
+    			<option value='Date'>Date</option>
+    		</select></p>
+			<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Upload" id="sub">
+			</form>
+		</body>
+		<footer>
+			<center><font color="white">&copyProject conceptualised and developed by Sanjana Ramprasad, Sharath Sreenivasan and Shrikanth Kainthaje. Copyright protected.</font></center> 
+			<br>
+		</footer>
+</html>

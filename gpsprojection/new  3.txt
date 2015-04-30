@@ -1,0 +1,17 @@
+an Individual Representation of the source for later location estimation
+MCC, MNC, LAC, CI (for celltowers)
+MAC (for WiFi hotspots)
+a Timestampin CFAbsoluteTime format
+when the location information of the device was retrieved,  that is, when location services were used and the location daemon needs to be updated.
+the Location of the device
+Latitude, Longitude,
+the Horizontal- and Vertical- Accuracyof the device
+to be interpreted as the transmitter range of the device (therefore celltowers do not transmit vertical, so the value is -1.0, many WiFi hotspots do have more than one antenna to provide a more all around transmitting range)
+the Altitudeof the device
+the Altitude of celltowers is 0, because the greater divergence resulting of a higher transmitting range
+Speed / Course
+not used
+and the Confidenceof the source
+to be interpreted as the reliability of the source
+50-70 for celltowers, maybe in relation to the consolidation experience from Apple
+50, “to be or not to be”, or 50% of reliability
