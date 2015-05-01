@@ -1,0 +1,49 @@
+<html>
+	<h1><font face="Calibri"><center>UPLOADING FILE</center></font></h1>
+	<script src="jquery-1.5.2.min.js" type="text/javascript"></script>
+		<head>
+			<title>Extraction of location details</title>
+			<style>
+				#sub 
+				{
+					-moz-border-radius: 15px;
+					-webkit-border-radius: 15px;
+					border: 0px solid #000000;
+					padding: 5px;
+				}
+				body
+				{
+					background-image: url("Forensics_Background3.jpg");
+					background-size: 100% 100%;
+				}
+				footer
+				{
+            		width: 100%;
+            		bottom: 0;
+            		position: fixed;
+        		}
+        		form
+        		{
+        			margin: 0 auto; 
+					width:170px;
+        		}
+			</style>
+			
+		</head>
+		<body>
+			<br><br><br><br><br><br>
+			<form enctype="multipart/form-data" action="/cgi-bin/extraction.py" method="post" id="myform">
+			<p><font face="Calibri">Extraction Details from Server</font></p>
+    		<p>Username:<input type="text" name="username"><br></p>
+    		<p>Password:<input type="text" name="password"><br></p>
+    		<p>IP :<input type="text" name="ip"><br></p>
+    		<p>Port:<input type="text" name="port"><br></p>
+
+			<br>
+			</form>
+		</body>
+		<footer>
+			<center><font color="white">&copyProject conceptualised and developed by Sanjana Ramprasad, Sharath Sreenivasan and Shrikanth Kainthaje. Copyright protected.</font></center> 
+			<br>
+		</footer>
+</html>
