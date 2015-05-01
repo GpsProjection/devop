@@ -1,9 +1,9 @@
 import re
 import geocoder
 import datetime
-#filea=open('cache.cell','r')
-#lister=filea.readlines()
-#print lister
+filea=open('cache.cell','r')
+lister=filea.readlines()
+print lister
 
 def filtering(type,data,value):
     l=value[1:]
@@ -30,10 +30,12 @@ def filtering(type,data,value):
                     result.append(line)
 
         elif type=='date':
-            comparator=datetime.datetime.strptime(data, "%d-%m-%Y").strftime("%m/%d/%y")
+            comparator=datetime.datetime.strptime(data, "%Y-%m-%d").strftime("%m/%d/%y")
             comparing=datetime.datetime.strptime(comparator, "%m/%d/%y").date()
+            print "CSI",comparing
             if re.match('[0-9]+/[0-9]+/[0-9]+$',date_file):
                 date=datetime.datetime.strptime(date_file, "%m/%d/%y").date()
+                print date
                 if comparing == date:
                     result.append(line)
 
@@ -54,5 +56,5 @@ def filtering(type,data,value):
 
 
     #android_test(result) 
-#result=filtering('location','BASAVANAGUDI',lister)
-#print "RESULT",result
+result=filtering('date','2011-04-13',lister)
+print "RESULT",result
